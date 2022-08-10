@@ -1,0 +1,351 @@
+@font-face{
+    font-family: "Aachen BT";
+    src: url(../font/aachenn.ttf);
+}
+body{
+    background-color: rgba(40, 40, 45, 0.9);  
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Aachen BT";
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container{
+    width: 100%;
+    margin: 0 auto;
+}
+.just-sp-bt{
+    justify-content: space-between;
+}
+.col-50{
+    width: 50%;
+}
+.col-33{
+    width: 100%;
+    overflow: hidden;
+}
+.mt-2{
+    margin-top: 4em;
+    margin-bottom: 4em;
+}
+.mt-5{
+    margin-top: 5em;
+}
+.ml-a{
+    margin-left: auto;
+}
+.pd-2{
+    padding-right: 2em;
+    padding-left: 2em;
+}
+.posi-rele{
+    position: relative;
+}
+.text-al{
+    text-align: center;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 17px;
+    transform: scale(1s);
+}
+nav ul li a:hover{
+    color: #e58f00;
+    transition: 1s;
+}
+.active{
+    color: #e58f00;
+}
+#home{
+    height: 100vh;
+    background-size: cover;
+    background-image: url(../Images/background.png);
+    z-index: 1;
+    position: relative;
+}
+#home::after{
+    content: ".";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(40, 40, 45, 0.9);
+    z-index: -1;
+}
+.main-menu{
+    padding-top: 20px;
+}
+.img-1{
+    width: 90%;
+}
+.main-header-txt{
+    margin-top: 9em;
+}
+.breakfast{
+    color: #e58f00;
+    letter-spacing: 1px;
+    font-size: 45px;
+}
+.lorem-1{
+    color: white;
+    font-family: sans-serif;
+    font-size: 25px;
+    width: 445px;
+}
+button{
+    height: 50px;
+    width: 150px;
+    background-color: #e58f00;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 1em;
+}
+.about{
+    padding-top: 5em;
+    padding-bottom: 5em;
+    color: white;
+}
+.about img{
+    width: 100%;
+    display: block;
+}
+.about p{
+    width: 80%;
+    font-size: 20px;
+    margin-top: 25px;
+}
+.about h2{
+    text-transform: capitalize;
+}
+.about-text{
+    padding: 185px 35px;
+}
+#svg{
+    overflow: hidden;
+    position: relative;
+    padding: 100px 0;
+}
+.clipped {
+    width: 138%;
+    left: -220px;
+    position: relative;
+    height: 1204px; 
+    background: #e58f00;
+    background-size: cover;
+    -webkit-clip-path: url(#my-clip-path);
+}
+.food-quality{
+    width: 35%;
+    position: absolute;
+    right: -16%;
+    top: 15%;
+    z-index: 1;
+}
+.qunality-text{
+    position: absolute;
+    z-index: 1;
+    /* margin-left: 159px; */
+    margin-top: 20%;
+    color: white;
+}
+.qunality-text h2{
+    font-size: 30px;
+}
+.qunality-text p{
+    font-size: 20px;
+    width: 373px;
+    margin-top: 20px;
+}
+.egg-img{
+    width: 46%;
+    position: absolute;
+    right: -2%;
+    top: 48%;
+    z-index: 1;
+}
+.fruits-img{
+    width: 35%;
+    position: absolute;
+    bottom: 16px;
+    z-index: 1;
+    left: -3%;
+}
+.gallery{
+    color: white;
+}
+.gallery h2{
+    font-size: 35px;
+    padding: 40px 40px;
+}
+.gallery img{
+    width: 100%;
+    padding: 10px;
+}
+.bg-img{
+    background-image: url(../Images/img12.png);
+    padding: 150px 0;
+    background-size: cover;
+    width: 100%;
+}
+.food{
+    width: 63%;
+    margin: 0 auto;
+    color: white;
+    background-color: rgba(29,29,35,0.8);
+    padding: 200px ;
+    border: 5px solid #e58f00;
+}
+.mgfood h2{
+    font-size: 44px;
+}
+.mgfood p{
+    font-size: 21px;
+    padding-top: 20px;
+}
+.px-2{
+    padding: 0 1em;
+}
+.ouermenu{
+    font-size: 50px;
+    color: white;
+    padding: 40px 40px;
+}
+.money{
+    color: #e58f00 !important;
+}
+.card-img{
+    height: 225px;
+}
+.card-img img{
+    height: inherit;
+    object-fit: cover;
+    width: 100%;
+}
+.card-body h3{
+    color: #e58f00;
+    padding-top: 30px;
+}
+.card-body p{
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.money{
+    color: #e58f00 !important; 
+}
+.box-2{
+    height: 440px;
+    width: 100%;
+    background-color: #e58f00;
+}
+.best-meal{
+    padding-top: 10em;
+}
+.fruits-img2{
+    position: relative;
+    bottom: 90px;
+    width: 80%;
+}
+.best-text{
+    padding-top: 8em;
+}
+.best-meal-text{
+    color: white;
+    font-size: 40px;
+}
+.best-meal-pere{
+    width:  362px;
+    font-size: 25px;
+    margin-top: 15px;
+    color: white;
+}
+.box-3{
+    height: 430px;
+    width: 100%;
+    background-color: #35353b;
+    padding-top: 7em;
+}
+.logo2
+{
+    display: flex;
+    justify-content: center;
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+    padding: 35px;
+}
+.navbar ul li{
+    display: inline-block;
+}
+.navbar ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+.fafa-bars{
+    display: flex;
+    justify-content: center;
+}
+.fa-brands{
+    padding: 17px;
+    color: aliceblue;
+    font-size: 30px;
+}
+@media (min-width:576px){
+    .container{
+        width: 540px;
+    }
+    .col-50{
+        width: 100%;
+    }
+    
+}
+@media (min-width:768px){
+    .container{
+        width: 720px;
+    }
+    .col-33{
+        width: 50%;
+    }
+    .col-50{
+        width: 100%;
+    }
+    
+}
+@media (min-width:992px){
+    .container{
+        width: 960px;
+    }
+    .col-33{
+        width: 50%;
+    }
+    .col-50{
+        width: 50%;
+    }
+    
+}
+@media (min-width:1200px){
+    .container{
+        width: 1140px;
+    }
+    .col-33{
+        width: 33%;
+    }
+    .col-50{
+        width: 50%;
+    }
+}

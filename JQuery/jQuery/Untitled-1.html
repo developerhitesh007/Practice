@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="Untitled-1.css">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h2>REGISTRATION FORM</h2>
+    </div>
+    <form method="post"  class="form" id="form" >
+        <div class="form-control">
+            <label>Username</label>
+            <input type="text" onkeyup="lengthfind(this,'userNameLengthError')" onblur="checkreq(this,'userNameError')" name="Username" id="Username" required placeholder="Enter your fullname" autocomplete="off">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small id="userNameError">This field is required</small>
+            <small id="userNameLengthError">Min 6 Max 10 char</small>
+        </div>
+        <div class="form-control">
+            <label>Email</label>
+            <input type="email" onkeyup="emailpattern(this,'emailPatternError')" onblur="checkreq(this,'emailError')" name="Email" id="Email" required placeholder="Enter your Email"autocomplete="off">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small id="emailError">Error Msg</small>
+            <small id="emailPatternError">Invalid Email</small>
+        </div>
+        <div class="form-control">
+            <label>Phone Number</label>
+            <input type="tel" onkeypress="return (event.which >= 48 && event.which <= 57)" onblur="checkreq(this,'phoneError')" minlength="10" maxlength="10" name="Phone" required id="Phone" placeholder="Enter your Phone Number"autocomplete="off">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small id="phoneError">Error Msg</small>
+        </div>
+        <div class="form-control">
+            <label>Password</label>
+            <input type="password" onblur="checkreq(this,'passwordError')" name="Password" required id="Password" placeholder="Enter your Password"autocomplete="off">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small id="passwordError">Error Msg</small>
+        </div>
+        <div class="form-control">
+            <label>Confirm Password</label>
+            <input type="password"  onblur="checkreq(this,'cpassError'), checkpass(this,'cpassError')" name="cPassword" required id="cPassword" placeholder="Enter your Password again"autocomplete="off">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small id="cpassError">Error Msg</small>
+        </div>
+        <input type="submit" value="submit" class="btn" name="">
+    </form>
+</div>
+<script type="text/javascript">
+
+function checkreq(e,spnid) {
+    if (e.value == '') {
+        document.getElementById(spnid).style.visibility="visible"
+    } else {
+        document.getElementById(spnid).style.visibility="hidden"
+    }
+}
+function lengthfind(e,spnid) {
+    if (e.value.length < 6 || e.value.length > 10) {
+        document.getElementById(spnid).style.visibility="visible"
+    } else {
+        document.getElementById(spnid).style.visibility="hidden"
+    }
+}
+
+function emailpattern(e,spnid) {
+    console.log(e.value);
+    // var ptrn = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // Only Char Patter START
+    // var ptrn = /^[a-z]+$/;
+    // var ptrn = /^[a-zA-Z]+$/;
+    // Only Char Patter END
+    
+    // Only Numbers Patter START
+    // var ptrn = /^[0-9]+$/;
+    // Only Numbers Patter END
+
+    // Email Patter START
+    // var ptrn = /^[a-zA-z0-9]+$/;
+    var ptrn = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    // Email Patter END
+    console.log(ptrn.test(e.value));
+    
+    if (!ptrn.test(e.value)) {
+        document.getElementById(spnid).style.visibility="visible"
+    } else {
+        document.getElementById(spnid).style.visibility="hidden"
+    }
+}
+function checkpass(e,spnid) {
+    var pass = document.getElementById('Password');
+    if (e.value !== pass.value) {
+        document.getElementById(spnid).style.visibility="visible"
+    } else {
+        document.getElementById(spnid).style.visibility="hidden"
+    }
+}
+</script>
+</body>
+
+</html>

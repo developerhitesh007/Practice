@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .container {
+            width: 1140px;
+            margin: 0 auto;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .w-25{ width: 25%;}
+        .w-75{ width: 75%;}
+
+        img {
+            /* width: 100%; */
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .navbar li {
+            display: inline-block;
+        }
+
+        .navbar li a {
+            color: #252c3a;
+            padding: 10px;
+        }
+
+        .main-header {
+            line-height: 60px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .logo img {
+            vertical-align: middle;
+        }
+
+        .slider {
+            background-color: black;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+        .posi-rele {
+            position: relative;
+        }
+
+        .active {
+            border-bottom: 3px solid #e74c3c;
+            ;
+            /* background-color:  */
+            /* height: 3px;
+            position: relative;
+            bottom: 0; */
+        }
+
+        .nav-item:hover a::before {
+            content: " ";
+            position: absolute;
+            bottom: -3px;
+            background-color: #e74c3c;
+            width: 100%;
+            left: 10%;
+            height: 3px;
+        }
+        .slider-box{
+            width: 34;
+            background-color: white;
+            padding: 70px 30px;
+            box-shadow: 2px 2px 5px grey;
+        }
+        .slider-box:hover{
+            box-shadow: 3px 3px 10px grey;
+        }
+        .slider-box p{
+            width: 70%;
+            font-weight: 600;
+            margin-left: 30px;
+        }
+        .slider-box a{
+            display: inline-block;
+            margin-left: 30px;
+            margin-top: 15px;
+        }
+        .theme-red-clr{
+            color: #e74c3c;
+        }
+        /* .ml-10{
+            margin-left: 10px;
+        } */
+        .posirelsliderbot{
+            position: absolute;
+            bottom: -100px;
+            width: 1140px;
+            left: 8%;
+        }
+        .mt-100{
+            margin-top: 100px;
+        }
+        .super-man-txt{
+            padding: 50px;    
+        }
+        .super-man-title-txt{
+            padding: 50px 21px;
+            width: 80%;
+        }
+        .fixed{
+            position: fixed;
+            background-color: white;
+            z-index: 1;
+            width: 100%;
+        }
+  
+       
+        .disp{
+            display: block !important;
+        }
+        .navbar{
+            display: none;
+        }
+        @media (min-width: 992px) {
+            .navbar{
+                display: block;
+            }
+            .custfa-bars{
+                margin-left: auto;   
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="main-header" id="main-header">
+        <div class="container">
+            <div class="row">
+                <div class="logo">
+                    <img src="images/Layer98.png" alt="">
+                </div>
+                <nav>
+                    <ul class="navbar" id="navbar">
+                        <li class="nav-item active"><a href="#">Home</a></li>
+                        <li class="nav-item"><a href="#">Club-life</a></li>
+                        <li class="nav-item"><a href="#">training</a></li>
+                        <li class="nav-item"><a href="#">instructions</a></li>
+                        <li class="nav-item"><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <i onclick="ToggleMenu()" class="fa fa-bars custfa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <section class="slider posi-rele">
+
+       
+        <div class="container">
+            <img src="images/Layer54.png" alt="">
+        </div>
+        <div class="container posirelsliderbot">
+            <div class="row">
+                <div class="col slider-box">
+                    <div class="row">
+                        <div class="col">
+                            <img src="images/Forma1.png" alt="">
+                        </div>
+                        <div class="col ml-10">
+                            <p>
+                                MuscleMania Universe Natural
+                            </p>
+                            <a class="theme-red-clr" href="#">View More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col slider-box">
+                    <div class="row">
+                        <div class="col">
+                            <img src="images/Forma1.png" alt="">
+                        </div>
+                        <div class="col ml-10">
+                            <p>
+                                MuscleMania Universe Natural
+                            </p>
+                            <a class="theme-red-clr" href="#">View More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col slider-box">
+                    <div class="row">
+                        <div class="col">
+                            <img src="images/Forma1.png" alt="">
+                        </div>
+                        <div class="col ml-10">
+                            <p>
+                                MuscleMania Universe Natural
+                            </p>
+                            <a class="theme-red-clr" href="#">View More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mt-100">
+        <div class="container">
+            <div class="row">
+                <div class="col w-25">
+                    <p class="super-man-title-txt">20 MINUTES. 20 DAYS. 20 INCHES.</p>
+                </div>
+                <div class="col w-75">
+                    <div class="row">
+                        <div class="col">
+                            <img src="images/Shape 563 copy (1).png" class="super-man-img" alt="">
+                        </div>
+                        <div class="col">
+                            <p class="super-man-txt">
+                                My Super-Man program uses supersets in which exercises for opposing muscle groups are paired together. With SS8, the supersets pair exercises for the same muscle group. This is technically called a “compound set,” a term coined by the late Joe Weider over 50 years ago.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+         <div class="container">
+            <div class="row">
+                <div class="col slider-box">
+                    <div class="row">
+                        <div class="col">
+                            <img src="images/Forma1.png" alt="">
+                        </div>
+                        <div class="col ml-10">
+                            <p>
+                                MuscleMania Universe Natural
+                            </p>
+                            <a class="theme-red-clr" href="#">View More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col slider-box">
+                    <div class="row">
+                        <div class="col">
+                            <img src="images/Forma1.png" alt="">
+                        </div>
+                        <div class="col ml-10">
+                            <p>
+                                MuscleMania Universe Natural
+                            </p>
+                            <a class="theme-red-clr" href="#">View More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col slider-box">
+                    <div class="row">
+                        <div class="col">
+                            <img src="images/Forma1.png" alt="">
+                        </div>
+                        <div class="col ml-10">
+                            <p>
+                                MuscleMania Universe Natural
+                            </p>
+                            <a class="theme-red-clr" href="#">View More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="container">
+            <div class="row">
+                <div class="col slider-box">
+                    <div class="row">
+                        <div class="col">
+                            <img src="images/Forma1.png" alt="">
+                        </div>
+                        <div class="col ml-10">
+                            <p>
+                                MuscleMania Universe Natural
+                            </p>
+                            <a class="theme-red-clr" href="#">View More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col slider-box">
+                    <div class="row">
+                        <div class="col">
+                            <img src="images/Forma1.png" alt="">
+                        </div>
+                        <div class="col ml-10">
+                            <p>
+                                MuscleMania Universe Natural
+                            </p>
+                            <a class="theme-red-clr" href="#">View More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col slider-box">
+                    <div class="row">
+                        <div class="col">
+                            <img src="images/Forma1.png" alt="">
+                        </div>
+                        <div class="col ml-10">
+                            <p>
+                                MuscleMania Universe Natural
+                            </p>
+                            <a class="theme-red-clr" href="#">View More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="container">
+            <div class="row">
+                <div class="col slider-box">
+                    <div class="row">
+                        <div class="col">
+                            <img src="images/Forma1.png" alt="">
+                        </div>
+                        <div class="col ml-10">
+                            <p>
+                                MuscleMania Universe Natural
+                            </p>
+                            <a class="theme-red-clr" href="#">View More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col slider-box">
+                    <div class="row">
+                        <div class="col">
+                            <img src="images/Forma1.png" alt="">
+                        </div>
+                        <div class="col ml-10">
+                            <p>
+                                MuscleMania Universe Natural
+                            </p>
+                            <a class="theme-red-clr" href="#">View More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col slider-box">
+                    <div class="row">
+                        <div class="col">
+                            <img src="images/Forma1.png" alt="">
+                        </div>
+                        <div class="col ml-10">
+                            <p>
+                                MuscleMania Universe Natural
+                            </p>
+                            <a class="theme-red-clr" href="#">View More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <footer>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script defer>
+            $(window).scroll(function () {
+                // console.log("called");
+                // console.log($("#div").scrollTop());
+                // console.log($(window).scrollTop());
+                if ($(window).scrollTop() > 500) {
+                    $("#main-header").addClass("fixed")
+                } else {
+                    $("#main-header").removeClass("fixed")
+                }
+            });
+            function ToggleMenu() {
+                console.log($("#navbar").hasClass('disp'));
+                console.log( $("#navbar").innerHeight());
+                if ($("#navbar").hasClass('disp')) {
+                    $("#navbar").removeClass('disp')
+                } else {
+                    $("#navbar").addClass('disp')
+                }
+                // $("#navbar").toggleClass('disp');
+            }
+        </script>
+    </footer>
+</body>
+
+</html>

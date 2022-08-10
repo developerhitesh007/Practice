@@ -1,0 +1,79 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>User Name</td>
+            <td><input onkeyup="checkuname(this.value,'uservaliderror')" type="text" onblur="checkreq(this,'usererror')"
+                    name="" id="">
+                <span id="usererror"></span>
+                <span id="uservaliderror"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="password" onblur="checkreq(this,'passerror')" name="" id="">
+                <span id="passerror"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input onkeyup="checkemail(this,'emailptrnerror')" type="text" name="" id="">
+            <span id="emailptrnerror"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input onkeypress="return (event.which >= 48 && event.which <= 57)" onkeyup="checkemail(this,'emailptrnerror')" type="text" name="" id="">
+            <span id="emailptrnerror"></span>
+            </td>
+        </tr>
+    </table>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    // var 12
+    // var user-12
+    // var user#12
+    // var user@12
+    var user12
+    var user_12
+    function checkreq(gmete, gmetespnid) {
+        if (gmete.value == '') {
+            $("#" + gmetespnid).text("This field is req")
+        } else {
+            $("#" + gmetespnid).text("")
+        }
+    }
+    function checkuname(e, spnid) {
+        var ptrn = /^[A-Za-z]+$/;
+        // console.log(ptrn.test( e) );
+        if ( ptrn.test(e)) {
+            $("#" + spnid).text("This field is req")
+        } else {
+            $("#" + spnid).text("")
+        }
+    }
+    function checkemail(e, spnid) {
+        var ptrn =/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        // console.log(ptrn.test( e) );
+        if (ptrn.test(e)) {
+            $("#" + spnid).text("Valid")
+        } else {
+            $("#" + spnid).text("Invalid Email")
+        }
+        // if (!ptrn.test(e)) {
+        //     $("#" + spnid).text("Invalid Email")
+        // }
+    }
+</script>
+
+</html>
