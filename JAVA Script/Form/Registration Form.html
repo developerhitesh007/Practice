@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="register">
+        <h2>Registration Form</h2>
+        <form method="post" id="register" action="">
+            
+            <label>Fast Name:</label><br>
+            <input type="text" name="Fast Name" id="name" placeholder="Fast Name" pattern="[a-z{4,8}]" onkeyup="checkpattern(this,'fastnameerror')" onblur="chekreq(this,'fastnameerror')">
+            <br>
+            <span id="fastnameerror"></span>
+            <br>
+            
+            <label>Last Name:</label><br>
+            <input type="text" name="Last Name" id="name" placeholder="Last Name" onblur="chekreq(this,'lastnameerror')">
+            <br>
+            <span id="lastnameerror"></span>
+            <br>
+
+            <label>Mobile Namber:</label><br>
+            <select id="ph">
+                <option>+91</option>
+                <option>+95</option>
+                <option>+203</option>
+                <option>+90</option>
+                <option>+205</option>
+            </select>
+            <input type="tel" minlength="10" maxlength="10" name="Mobile Namber" id="number" placeholder="Mobile Namber" onblur="chekreq(this,'mobileerror')">
+            <br>
+            <span id="mobileerror"></span>
+            <br>
+
+            <label>Email:</label><br>
+            <input type="email" name="email" id="name" placeholder="Email" onblur="chekreq(this,'emailerror')">
+            <br>
+            <span id="emailerror"></span>
+            <br>
+
+            <label>Password:</label><br>
+            <input type="password" name="Password" id="name" placeholder="Password" onblur="chekreq(this,'passworderror')">
+            <br>
+            <span id="passworderror"></span>
+            <br>
+
+            <label>Conform Password:</label><br>
+            <input type="password" name="Password" id="name" placeholder="ConformPassword" onblur="chekreq(this,'conformpassworderror')">
+            <br>
+            <span id="conformpassworderror"></span>
+            <br>
+            <input type="submit" value="submit" id="sub">
+        </form>
+    </div>
+
+    <script>
+        function checkpattern(alldata,spn) {
+            var fnamepattern = /^[a-zA-Z]+$/;
+            if(fnamepattern.test(alldata.value)){
+                console.log("valid");
+            }else{
+                console.log("invalid");
+            }
+            
+            
+        }
+
+        function chekreq(alldata,spnid) {
+            console.log("called")
+            console.log("alldatax")
+            if (alldata.value =="") {
+                document.getElementById(spnid).innerText="This filed is required"
+            }else{
+                document.getElementById(spnid).innerText=""
+            }
+        } 
+    </script>
+
+</body>
+</html>

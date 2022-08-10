@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click menu btn</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="btn.css">
+</head>
+
+<body>
+    <section class="header" id="home">
+        <div class="banner">
+            <div class="container">
+                <div class="row">
+                    <a class="logo" href="#">
+                        <img src="H.P.png" alt="">
+                    </a>
+                    <div class="ml-a">
+                        <div class="navbar">
+                            <ul class="menu">
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#personal">Personal</a></li>
+                                <li><a href="#work">Work</a></li>
+                                <li><a href="#contant">Contact</a></li>
+                            </ul>
+                            <!-- <i onclick="showhidemenu()" id="menu-btn" class="fa fa-bars btn-menu"> </i> -->
+                            <i id="menu-btn" class="fa fa-bars btn-menu"> </i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <script>
+
+        document.getElementById('menu-btn').addEventListener("click",function () {
+           var menuData = document.getElementsByClassName("menu");
+           console.log(menuData);
+           console.log(menuData[0].classList);
+        //    menuData[0].classList.add("disp-block")
+           
+           console.log(menuData[0].classList.contains("disp-block"));
+
+           if (menuData[0].classList.contains("disp-block")){
+                menuData[0].classList.remove("disp-block")
+           }
+           else{
+            menuData[0].classList.add("disp-block")
+           }
+        })
+        // console.log(document.getElementById('menu-btn'));
+        // function showhidemenu(){
+        //     console.log("called");
+        // }
+    </script>
+</body>
+
+</html

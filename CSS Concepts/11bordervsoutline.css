@@ -1,0 +1,5 @@
+div{
+    border: 15px dotted rgb(255, 10, 10);
+    outline: 15px groove orange;
+    margin: 20px;
+}

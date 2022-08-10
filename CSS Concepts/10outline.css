@@ -1,0 +1,37 @@
+.outline-dotted{
+    color: chartreuse;
+    outline: 15px dotted;
+    height: 15px;
+    margin: 100px;
+}
+.outline-dash{
+    outline: 15px dashed;
+    height: 15px;
+    margin: 100px;
+}
+.outline-solid{
+    color: dimgrey;
+    outline: 15px solid;
+    height: 15px;
+    margin: 100px;
+}
+.outline-double{
+    outline: 15px double;
+    height: 15px;
+    margin: 100px;
+}
+.outline-groove{
+    outline: 15px groove;
+    height: 15px;
+    margin: 100px;
+}
+.outline-intet{
+    outline: 15px inset;
+    height: 15px;
+    margin: 100px;
+}
+.outline-outset{
+    outline: 15px outset;
+    height: 15px;
+    margin: 100px;
+}

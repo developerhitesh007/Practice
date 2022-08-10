@@ -1,0 +1,57 @@
+h2{
+    text-align: center;
+    font-size: 50px;
+}
+.bg-img{
+    height: 1000px;
+    background-image: url(img/Games.jpg);
+}
+.bg-img-attach{
+    height: 700px; 
+    background-image: url(img/wp2579649.png);
+    background-attachment: fixed;
+    
+}
+.bg-img-clip{
+    height: 1000px;
+    background-image: url(img/wp01.jpg);
+    background-clip: border-box;
+    border: 10px dashed yellow;
+}
+.bg-img-ori{
+    height: 800px;
+    background-image: url(img/pubg-pubh-playerunknown-s-battlegrounds-wallpaper-preview.jpg);
+    background-origin: content-box;
+    border: 10px dashed rgb(41, 169, 219);
+}
+.bg-img-no-rep{
+    height: 1000px;
+    background-image: url(img/wp2579649.png);
+    background-origin: content-box;
+    border: 10px dashed rgb(76, 0, 255);
+    background-repeat: no-repeat;
+    
+}
+.bg-img-no-rep-posi{
+    height: 1000px;
+    background-image: url(img/HD-wallpaper-pubg-gaming-man.jpg);
+    background-origin: content-box;
+    border: 10px dashed rgb(152, 43, 214);
+    background-repeat: no-repeat;
+    background-position: 50% 10%;
+
+}
+.bg-img-no-rep-posi{
+    height: 1000px;
+    background-image: url(img/HD-wallpaper-pubg-gaming-man.jpg);
+    background-origin: content-box;
+    border: 10px dashed rgb(255, 0, 0);
+    background-repeat: no-repeat;
+    background-position: 50% 10%;
+    background-size: cover;
+}
+.bg-img-short{
+    height: 1000px;
+    background: url(img/M416.jpg) no-repeat center center fixed;
+    background-size: cover;
+}

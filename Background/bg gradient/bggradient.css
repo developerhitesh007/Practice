@@ -1,0 +1,56 @@
+.bg-clr{
+    height: 300px;
+    background-color: black;
+   
+}
+.bg-img{
+    height: 450px;
+    background-image: url(img/car.jpg)    
+}
+.bg-img-attach{
+    height: 450px;
+    background-image: url(./img/05car.jpg);
+    background-attachment: fixed;
+}
+.bg-img-clip{
+    height: 450px;
+    background-image: url(./img/04car.jpg);
+    background-clip: content-box;
+    border: 20px dashed rgb(255, 80, 80);
+}
+.bg-img-ori{
+    height: 450px;
+    background-image: url(./img/06car.jpg);
+    background-origin: content-box;
+    border: 10px dashed rgb(0, 0, 0);
+}
+.bg-img-no-rep-{
+    height: 450px;
+    background-image: url(./img/07car.jpg);
+    background-origin: content-box;
+    border: 10px dashed #ff0011;
+    background-repeat: no-repeat;
+}
+.bg-img-no-rep-posi{
+    height: 450px;
+    background-image: url(./img/08.jpg);
+    background-origin: content-box;
+    border: 10px dashed blue;
+    background-repeat: no-repeat;
+    background-position: 50% 10%;
+}
+.bg-img-no-rep-posi{
+    height: 450px;
+    background-image: url(./img/09.jpg);
+    background-origin: content-box;
+    border: 10px dashed blue;
+    background-repeat: no-repeat;
+    background-position: 50% 10%;
+    /*background-size: contain;*/
+    background-size: cover;
+}
+.bg-img-short{
+height: 450px;
+background: url(./img/2car.jpg) no-repeat center center fixed;
+background-size: cover;
+}

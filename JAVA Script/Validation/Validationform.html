@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <table>
+        <tr>
+            <td>Username</td>
+            <td><input type="text" onblur="chekreq(this,'usernameError')" placeholder="Enter User Name" name="username" value="Hitesh" id="username" required>
+                <span id="usernameError"></span>
+            </td>
+           
+        </tr>
+
+        <script>
+            function chekreq(kaipn,spn) {
+                console.log(kaipn);
+                console.log(kaipn.value);
+                if (kaipn.value == '') {
+                    document.getElementById(spn).innerText="This field is required !!!!"
+                    
+                }
+                else{
+                    document.getElementById(spn).innerText="" 
+                    
+                }
+            }
+        </script>
+      <tr>
+        <td>Password</td>
+        <td><input type="password" onblur="chekreq(this,'passwordError')" placeholder="Enter Password" required>
+            <span id="passwordError"></span>
+        </td>
+       
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td><input type="email" onblur="chekreq(this,'emailerror')" placeholder="Enter your Email" name="" value="" id="" required>
+            <span id="emailerror"></span>
+        </td>
+    </tr>
+    <tr>
+        <td>Mobile</td>
+        <td><input type="tel" onblur="chekreq(this,'mobileerror')" placeholder="Enter your Mobile Namber" name="" value="" id="" required>
+            <span id="mobileerror"></span>
+        </td>
+    </tr>
+    <tr>
+        <td><input type="submit" name="registration" value="Registration" id="registration"></td>
+    </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="validation.js"></script>
+</head>
+
+<body>
+    
+    <form>
+        <table>
+            <tr>
+                <td>Username</td>
+                <td><input type="text" onblur="chekreq(this,'usernameError')" placeholder="Enter User Name" name="username" value="Hitesh" id="username" required>
+                    <span id="usernameError"></span>
+                </td>
+               
+            </tr>
+    
+          <tr>
+            <td>Password</td>
+            <td><input type="password" onkeyup="chekpass(this,'passwordPatternMatch')"  onblur="chekreq(this,'passwordError')" placeholder="Enter Password" required>
+                <span id="passwordError"></span>
+                <span id="passwordPatternMatch"></span>
+            </td>
+           
+        </tr>
+        <tr>
+            <td>Conform Password</td>
+            <td><input type="password" onblur="chekreq(this,'conformpasswordError')" placeholder="Conform Password" required>
+                <span id="conformpasswordError"></span>
+            </td>
+           
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" onkeyup="chekpass(this,'emailPatternError')"  onblur="chekreq(this,'emailerror')" placeholder="Enter your Email" name="" value="" id="" required>
+                <span id="emailerror"></span>
+                <span id="emailPatternError"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Mobile
+                <select id="ph">
+                    <option>+91</option>
+                    <option>+95</option>
+                    <option>+203</option>
+                    <option>+90</option>
+                    <option>+205</option>
+                </select>
+            </td>
+            <td><input type="tel" onblur="chekreq(this,'mobileerror')" placeholder="Enter your Mobile Namber" name="" value="" id="" required>
+                <span id="mobileerror"></span>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="submit" name="registration" value="Registration" id="registration"></td>
+        </tr>
+        </table>
+    </form>
+</body>
+</html>

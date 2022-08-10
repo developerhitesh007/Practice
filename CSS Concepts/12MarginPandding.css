@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+div{
+border: 2px solid;
+}
+.pandding{
+    padding: 50px;
+}
+.margin{
+    margin: 50px;
+}
+.margin-4-size{
+    /* margin: 50px; */
+    margin: 50px 100px 150px;
+    /* margin: top-right-bottom-left;START */
+    margin-top: 20px;
+
+}

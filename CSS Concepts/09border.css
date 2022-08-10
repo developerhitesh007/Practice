@@ -1,0 +1,35 @@
+.border-solid{
+    border: 20px solid;
+    height: 25px;
+    margin: 20px;
+}
+.border-dash{
+    border: 20px dashed;
+    height: 25px;
+    margin: 20px;
+}
+.border-double{
+    border: 20px double;
+    height: 25px;
+    margin: 20px;
+}
+.border-groove{
+    border: 20px groove;
+    height: 25px;
+    margin: 20px;
+}
+.border-ridge{
+    border: 20px ridge;
+    height: 25px;
+    margin: 20px;
+}
+.border-inset{
+    border: 20px inset;
+    height: 25px;
+    margin: 20px;
+}
+.border-outset{
+    border: 20px outsets;
+    height: 25px;
+    margin: 20px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="slider.js"></script> -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 1140px;
+        }
+    img{
+        width: 100%;
+    }
+    .box{
+        height: 700px;
+        /* overflow: hidden; */
+    }
+    .anim{
+        animation: slideranim 3s;
+        position: relative;
+    }
+    @keyframes slideranim{
+        from{
+            left: -100%;
+        }
+        to{
+            left: 0%;
+        }
+    }
+    </style> 
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img class="slider-img" src="img/10.jpg" alt="">
+            <img class="slider-img" src="img/11.jpg" alt="">
+            <img class="slider-img" src="img/12.jpg" alt="">
+            <img class="slider-img" src="img/13.jpg" alt="">
+            <img class="slider-img" src="img/14.jpg" alt="">   
+        </div>
+    </div>
+<script src="slider.js"></script>
+</body>
+</html>

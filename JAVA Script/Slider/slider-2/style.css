@@ -1,0 +1,11 @@
+.container{
+    width: 1140px;
+    margin: 0 auto;
+}
+img{
+    width: 100%;
+}
+.box{
+    height: 600px;
+    overflow: hidden;
+}
